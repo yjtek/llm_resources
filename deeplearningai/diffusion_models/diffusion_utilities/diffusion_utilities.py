@@ -5,7 +5,7 @@ from torchvision.transforms import Compose, ToTensor, Normalize
 from torchvision.utils import save_image, make_grid
 from torch.utils.data import Dataset
 from matplotlib.animation import FuncAnimation, PillowWriter
-import Image
+# import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -110,7 +110,7 @@ class ResidualConvBlock(nn.Module):
             # print(f"resconv forward: x {x.shape}, x1 {x1.shape}, x2 {x2.shape}, out {out.shape}")
 
             # Normalize output tensor
-            return out / 1.414
+            return out / 1.414 ## ? 1.414 = sqrt(2) as the "gain" parameter adjustment from relu activation?
 
         # If not using residual connection, return output of second convolutional layer
         else:
@@ -150,7 +150,7 @@ class UnetUp(nn.Module):
         # Create a list of layers for the upsampling block
         # The block consists of a ConvTranspose2d layer for upsampling, followed by two ResidualConvBlock layers
         layers = [
-            nn.ConvTranspose2d(in_channels, out_channels, 2, 2),
+            nn.ConvTranspose2d(in_channels, out_channels, 2, 2), ##upsampling --> https://www.geeksforgeeks.org/apply-a-2d-transposed-convolution-operation-in-pytorch/
             ResidualConvBlock(out_channels, out_channels),
             ResidualConvBlock(out_channels, out_channels),
         ]
