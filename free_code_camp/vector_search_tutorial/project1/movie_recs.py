@@ -36,5 +36,6 @@ results = collection.aggregate([
       }}
 ]);
 
+## Generate closest movies relative to prompt from mongoDB vector embedding `plot_embedding_hf`
 for document in results:
     print(f'Movie Name: {document["title"]},\nMovie Plot: {document["plot"]}\n')

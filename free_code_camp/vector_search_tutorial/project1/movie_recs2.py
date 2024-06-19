@@ -4,6 +4,7 @@ import openai
 # Set your OpenAI API key
 openai.api_key = '...'
 
+## Instead of creating embeddings yourself, use the pre-comptued embeddings in the table `sample_mflix`
 client = pymongo.MongoClient("mongodb+srv://beau:n9KkbZz60mfMPhWM@cluster0.svcxhgj.mongodb.net/?retryWrites=true&w=majority")
 db = client.sample_mflix
 collection = db.embedded_movies
