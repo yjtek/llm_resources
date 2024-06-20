@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "llm-development"
+version = "0.1.0"
+description = ""
+authors = ["yongjian.tek <yongjian.tek@grabtaxi.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+chainlit = "^1.1.302"
+openai = "^1.34.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
