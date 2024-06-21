@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rag-from-scratch"
+version = "0.1.0"
+description = ""
+authors = ["yongjian.tek <yongjian.tek@grabtaxi.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "<0.2.0"
+openai = "<1.35.1"
+ipykernel = "^6.29.4"
+langchain-openai = "<0.1.8"
+langchain-core = "<0.2.9"
+langchain-community = "<0.2.5"
+bs4 = "^0.0.2"
+numpy = "<2.0.0"
+ragatouille = "^0.0.8.post2"
+setuptools = "^70.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
